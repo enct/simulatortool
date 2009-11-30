@@ -9,7 +9,11 @@
     		
 		    <% if(Context.User.IsInRole("Admin")) { %>
 		    <li style="position: relative; float: left;"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/User/Management/ListUsers.aspx" Text="Manage Users" runat="server"></asp:HyperLink></li>
-		    <% } %>		    	    
+		    <% } %>	
+		    
+		    <% if(Context.User.IsInRole("Admin")) { %>
+		    <li style="position: relative; float: left;"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Simulation/LoadProfile/List.aspx" Text="Load Profiles" runat="server"></asp:HyperLink></li>
+		    <% } %>	    	    
 		    
 	    </ul>
     </div>

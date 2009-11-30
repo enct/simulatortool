@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=4.4.0.5, Culture=neutral, PublicKeyToken=5798b630e02d74fc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Aspose.Cells.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Windsor, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
@@ -92,6 +96,9 @@
     <Compile Include="AccessDenied.aspx.designer.cs">
       <DependentUpon>AccessDenied.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Model\Simulation\LoadProfile.cs" />
+    <Compile Include="App_Code\Model\Simulation\LoadProfileData.cs" />
+    <Compile Include="App_Code\Query\LoadProfileQuery.cs" />
     <Compile Include="App_Code\UserIdObjectSourceParameter.cs" />
     <Compile Include="MainMenu.ascx.cs">
       <DependentUpon>MainMenu.ascx</DependentUpon>
@@ -99,6 +106,27 @@
     </Compile>
     <Compile Include="MainMenu.ascx.designer.cs">
       <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simulation\LoadProfile\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -227,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccessDenied.aspx" />
+    <EmbeddedResource Include="App_Code\Model\Simulation\LoadProfile.hbm.xml" />
     <Content Include="App_Themes\Default\GridView.skin" />
     <Content Include="Assets\css\jquery.tooltip.css" />
     <Content Include="Assets\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
@@ -247,7 +276,13 @@
     <Content Include="Assets\scripts\ui.core.js" />
     <Content Include="Assets\scripts\ui.datepicker.js" />
     <Content Include="MainMenu.ascx" />
+    <Content Include="Simulation\LoadProfile\Import.aspx" />
+    <Content Include="Simulation\LoadProfile\List.aspx" />
     <Content Include="User\Management\LockedUsers.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Simulation\LoadProfile\Edit.aspx" />
+    <Content Include="Simulation\LoadProfile\Web.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />

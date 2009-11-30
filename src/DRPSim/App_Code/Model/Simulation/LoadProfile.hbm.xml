@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<hibernate-mapping auto-import="true"
+					    default-lazy="true"
+						 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+						 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						 xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DRPSim"
+                   namespace="DRPSim.Model.Simulation">
+
+   <class name="LoadProfile" table="LoadProfiles">      
+
+      <id name="Id">
+         <generator class="guid.comb" />
+      </id>      
+
+      <property name="Name" type="String">
+         <column name="Name" not-null="true" length="255"/>
+      </property>      
+
+      <property name="Description" type="String">
+         <column name="Description" />
+      </property>
+
+      <many-to-one name="AddedBy" class="DRPSim.Model.User, DRPSim">
+         <column name="AddedByUserId" not-null="true" />
+      </many-to-one>
+
+      <bag name="Data" table="LoadProfileData" cascade="all-delete-orphan">
+         <key column="LoadProfileId" not-null="true" />
+         <composite-element class="LoadProfileData">
+            <property name="StartTime" column="StartTime" not-null="true" />
+            <property name="EndTime" column="EndTime" not-null="true" />
+            <property name="Consumption" column="Consumption" not-null="true" />
+         </composite-element>         
+      </bag>
+
+      <property name="DateCreated">
+         <column name="DateCreated" not-null="true" />
+      </property>
+
+      <property name="DateUpdated">
+         <column name="DateUpdated" not-null="false" />
+      </property>
+
+   </class>
+</hibernate-mapping>

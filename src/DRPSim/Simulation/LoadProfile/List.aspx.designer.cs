@@ -8,45 +8,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DRPSim {
+namespace DRPSim.Simulation.LoadProfile {
     
     
-    public partial class MainMenu {
+    public partial class List {
         
         /// <summary>
-        /// HyperLink1 control.
+        /// SuccessMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Literal SuccessMessage;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// ImportLoadProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.HyperLink ImportLoadProfile;
         
         /// <summary>
-        /// HyperLink4 control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// HyperLink3 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// LoadProfilesGrid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView LoadProfilesGrid;
+        
+        /// <summary>
+        /// UsersObjectDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource UsersObjectDataSource;
     }
 }

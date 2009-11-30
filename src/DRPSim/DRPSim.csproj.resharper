@@ -1,0 +1,5 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>A34B9073-56AE-4D7A-8E36-77038D33AEA3/d:App_Code</SkipFolder>
+  </NamespaceFolders>
+</Configuration>
