@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<hibernate-mapping auto-import="true"
+					    default-lazy="true"
+						 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+						 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						 xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DRPSim"
+                   namespace="DRPSim.Model">
+
+   <class name="User" table="Users">
+      <cache usage="read-write"/>
+
+      <id name="Id">
+         <generator class="guid.comb" />
+      </id>
+
+      <property name="UserName" type="String">
+         <column name="UserName" not-null="true" length="255"/>
+      </property>
+
+      <property name="Name" type="String">
+         <column name="Name" not-null="true" length="255"/>
+      </property>      
+
+      <property name="EMail" type="String">
+         <column name="EMail" not-null="true" length="255"/>
+      </property>
+
+      <property name="Password" type="String">
+         <column name="Password" not-null="true" length="255"/>
+      </property>
+
+      <property name="PasswordSalt" type="String">
+         <column name="PasswordSalt" not-null="true" length="255"/>
+      </property>
+
+      <property name="LastSuccessfulLoginDate">
+         <column name="LastSuccessfulLoginDate" />
+      </property>
+
+      <property name="IncorrectPasswordAttemptCount">
+         <column name="IncorrectPasswordAttemptCount" not-null="true"/>
+      </property>
+
+      <property name="LastPasswordChangeDate">
+         <column name="LastPasswordChangeDate" not-null="true" />
+      </property>
+
+      <property name="IsLocked">
+         <column name="IsLocked" not-null="true" />
+      </property>
+
+      <bag name="Roles" table="UserRoles" cascade="all-delete-orphan">
+         <cache usage="read-write"/>
+         <key column="UserId" not-null="true" />
+         <element column="Role" not-null="true" />
+      </bag>
+
+      <property name="DateCreated">
+         <column name="DateCreated" not-null="true" />
+      </property>
+
+      <property name="DateUpdated">
+         <column name="DateUpdated" not-null="false" />
+      </property>
+
+   </class>
+</hibernate-mapping>
